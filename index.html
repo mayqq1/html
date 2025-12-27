@@ -2,361 +2,118 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Whitesquare Layout</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
-
-.header {
-    padding: 20px 0;
-}
-
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.logo {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-}
-
-.search input {
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    padding: 8px;
-    width: 200px;
-}
-
-.search button {
-      display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    padding: 8px 15px;
-    background: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-
-.nav {
-    background: #f5f5f5;
-    padding: 15px 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
-
-.nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 30px;
-}
-
-.nav a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    padding: 5px 10px;
-    transition: color 0.3s;
-}
-
-.nav a:hover {
-    color: #00a8ff;
-}
-
-.nav li.active a {
-    color: #00a8ff;
-    border-bottom: 2px solid #00a8ff;
-}
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .main-nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        .main-nav a {
-            text-decoration: none;
-            color: #555;
-            font-size: 14px;
-        }
-
-        .main-nav .active {
-            color: #00a8e8;
-            font-weight: bold;
-        }
-
-        .search input {
-            padding: 6px;
-            border: 1px solid #ccc;
-        }
-
-        .search button {
-            padding: 6px 12px;
-            background: #00a8e8;
-            color: #fff;
-            border: none;
-        }
-
-        
-        .hero {
-            background: #ddd;
-            padding: 50px 20px;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .hero h2 {
-            margin: 0;
-            font-size: 26px;
-            letter-spacing: 1px;
-        }
-
-        .hero p {
-            color: #555;
-            margin-top: 10px;
-        }
-
-        .tabs {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin: 25px 20px;
-            gap: 10px;
-        }
-
-        .tab {
-            display: flex;
-            align-items: center;
-            background: #f2f2f2;
-            border: 1px solid #d6d6d6;
-            padding: 8px 12px;
-            font-size: 13px;
-            color: #555;
-        }
-
-        .tab .num {
-            background: #00a8e8;
-            color: white;
-            width: 22px;
-            height: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .tab .label {
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 0.5px;
-        }
-
-        .grid-section {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-}
-
-@media (min-width: 900px) {
-    .grid-section {
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    .grid-section .card:nth-child(1),
-    .grid-section .card:nth-child(2) {
-        grid-column: span 6;
-    }
-
-    .grid-section .card:nth-child(3),
-    .grid-section .card:nth-child(4),
-    .grid-section .card:nth-child(5) {
-        grid-column: span 4;
-    }
-
-    .grid-section .card:nth-child(n+6) {
-        grid-column: span 1;
-        flex-wrap: nowrap;
-        margin: 0px 10px 0px;
-    }
-}
-
-        .card {
-            background: #fff;
-            padding: 15px;
-            border: 1px solid #e3e3e3;
-        }
-
-        .card h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .card a {
-            color: #00a8e8;
-            text-decoration: none;
-            font-size: 13px;
-        }
-
-        .footer {
-            background: #444;
-            color: white;
-            padding: 30px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            margin-top: 40px;
-        }
-
-        .footer-block h4 {
-            margin-top: 0;
-            font-size: 15px;
-        }
-
-        .social {
-            display: flex;
-            gap: 10px;
-        }
-
-        .icon {
-            width: 25px;
-            height: 25px;
-            background: #888;
-        }
-    </style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Grails</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-    <div class="logo">whitesquare</div>
-    <div class="search">
-        <form action="#">
-            <input type="text" placeholder="Search">
-            <button type="submit">GO</button>
-        </form>
+<section class="screen screen-1">
+     <header class="fixed-header">
+        <nav>
+            <div class="logo">Last Grails</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>Last Grails</h1>
+        <p></p>
+        <a href="#catalog" class="btn">НАЙДИ ТО ЧТО ТЕБЕ НУЖНО</a>
     </div>
-    
-    <nav class="nav">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PARTNERS</a></li>
-            <li><a href="#">CUSTOMERS</a></li>
-            <li><a href="#">PROJECTS</a></li>
-            <li><a href="#">CAREERS</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="hero">
-    <h2>privet</h2>
-    <p>privet</p>
+    </div>
 </section>
 
-<section class="tabs">
-    <div class="tab"><span class="num">1</span><span class="label">pervaya</span></div>
-    <div class="tab"><span class="num">2</span><span class="label">vtoraya</span></div>
-    <div class="tab"><span class="num">3</span><span class="label">tretia</span></div>
-    <div class="tab"><span class="num">4</span><span class="label">chetvertaya</span></div>
-</section>
+<section class="screen screen-2" id="catalog">
+    <h2>Самые популярные дизайнеры</h2>
+    <div class="cards">
 
-<section class="grid-section">
-
-    <div class="card">
-        <h3>first</h3>
-        <p>abvgdeyozhzieklm</p>
-    </div>
-
-    <div class="card">
-        <h3>second</h3>
-        <p>noprst</p>
-    </div>
-
-    <div class="card">
-        <h3>third</h3>
-        <p>abcdefghikjlmnk</p>
-    </div>
-
-    <div class="card">
-        <h3>fourth</h3>
-        <p>privetprivet...</p>
-    </div>
-
-    <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
         <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
-     <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
-     <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
-     <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
-     <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
-     <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
-     <div class="card">
-        <h3>fifth</h3>
-        <p>eshkereeeee..</p>
-    </div>
-    </div>
+            <img src="https://i.ibb.co/Ng3HWqJM/ft-LV2dkx7-Lo.jpg" alt="ft-LV2dkx7-Lo" ></a>
+            <h3>Raf Simons</h3>
+            <p>RIOT RIOT RIOT Collection Bomber</p>
+            <button class = "btn">Купить</button>
+        </div>
 
+        <div class="card">
+            <img src="https://i.ibb.co/xScCwdFx/2025-12-26-130011.png" alt="">
+            <h3>Carol Christian Poell</h3>
+            <p>U-sole boots</p>
+            <button class = "btn">Купить</button>
+        </div>
 
+        <div class="card">
+            <img src="https://i.ibb.co/nssL36Fm/2025-12-26-130349.png" alt="">
+            <h3>Bottega Veneta</h3>
+            <p>Puddle Boots</p>
+            <button class = "btn">Купить</button>
+        </div>
+ <div class="card">
+            <img src="https://media-assets.grailed.com/prd/listing/temp/f45a03abe513486eb1ebcb09c3fcaff2" alt="">
+            <h3>Number (N)ine</h3>
+            <p>Tribal Zip Hoodie</p>
+            <button class = "btn">Купить</button>
+        </div>
+ <div class="card">
+            <img src="https://media-assets.grailed.com/prd/listing/41252029/047a4e55ad1441098c256d5b45134dba" alt="">
+            <h3>Hysteric Glamour</h3>
+            <p>Stripped Jeans</p>
+            <button class = "btn">Купить</button>
+        </div>
+
+    </div>
 </section>
 
-<footer class="footer">
-    <div class="footer-block">
-        <h4>соцсетее</h4>
-        <p>приветпривет</p>
+<section class="screen screen-3">
+    <div class="about">
+        <h2>Сотрудничество</h2>
+        <p>
+            Хорошие условия для развития своего бизнеса по продаже вещей на нашем сайте. Нужны специалисты в сфере проверки вещей и агенты поддержки 
+        </p>
+        <a href="#contacts" class="btn-light">Узнать больше</a>
     </div>
+</section>
 
-    <div class="footer-block">
-        <h4>првиет</h4>
-        <p>первое<br>второе<br>третье<br>четвертое</p>
-    </div>
+<section class="screen screen-4">
+    <h2>Почему выбирают нас?</h2>
+    <div class="advantages">
 
-    <div class="footer-block">
-        <h4>привеприве</h4>
+        <div class="adv-card">
+            <h3>Большой выбор</h3>
+            <p>Вещи со всего СНГ на одном сайте</p>
         </div>
+
+        <div class="adv-card">
+            <h3>Быстрая доставка</h3>
+            <p>Настроенная логистика, защита посылок</p>
+        </div>
+
+        <div class="adv-card">
+            <h3>Отличная модерация</h3>
+            <p>Аутентификация одежды и справедливое решение в случае конфликта с продавцом</p>
+        </div>
+
     </div>
-</footer>
+</section>
+
+<section class="screen screen-5" id="contacts">
+    <h2>Контакты</h2>
+
+    <div class="contact-box">
+        <p><b>Телефон:</b> +7 637 892 83 83</p>
+    </div>
+    <div class="contact-box">
+        <p><b>Офис:</b> Ростов-на-Дону, Ул. Большая Садовая 31</p>
+    </div>
+    <div class="contact-box">
+        <p><b>Email:</b> lastgrails@gmail.com</p>
+    </div>
+    </div>
+</section>
 
 </body>
 </html>
